@@ -1,7 +1,7 @@
 // pages/index.tsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Article } from '../types';
+import { Article } from '@/types';
 import Link from 'next/link';
 
 const Home: React.FC = () => {

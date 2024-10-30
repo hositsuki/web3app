@@ -1,7 +1,7 @@
 // components/GPTCommentSuggestion.tsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Comment } from '../types';
+import { Comment } from '@/types';
 
 interface GPTCommentSuggestionProps {
     articleId: number;

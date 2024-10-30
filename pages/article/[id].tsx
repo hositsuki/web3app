@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
-import { Article, Comment } from '../../types';
+import { Article, Comment } from '@/types';
 import CommentForm from '../../components/CommentForm';
 import GPTCommentSuggestion from '../../components/GPTCommentSuggestion';
 
