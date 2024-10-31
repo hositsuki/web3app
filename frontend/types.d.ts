@@ -1,4 +1,4 @@
-// types.d.ts
+
 export interface Article {
     id: number;
     title: string;
