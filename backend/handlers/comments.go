@@ -31,10 +31,7 @@ func GetComments(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	err = json.NewEncoder(w).Encode(articleComments)
-	if err != nil {
-		return
-	}
+	json.NewEncoder(w).Encode(articleComments)
 }
 
 func AddComment(w http.ResponseWriter, r *http.Request) {
@@ -48,8 +45,5 @@ func AddComment(w http.ResponseWriter, r *http.Request) {
 	comment.ID = len(comments) + 1
 	comment.CreatedAt = time.Now()
 	comments = append(comments, comment)
-	err := json.NewEncoder(w).Encode(comment)
-	if err != nil {
-		return
-	}
+	json.NewEncoder(w).Encode(comment)
 }

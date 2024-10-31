@@ -22,8 +22,5 @@ func GenerateComment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	generatedContent := "Here's a GPT-generated comment based on: " + req.Prompt
-	err := json.NewEncoder(w).Encode(GPTResponse{Content: generatedContent})
-	if err != nil {
-		return
-	}
+	json.NewEncoder(w).Encode(GPTResponse{Content: generatedContent})
 }
