@@ -31,7 +31,7 @@ func GetComments(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	err := json.NewEncoder(w).Encode(articleComments)
+	err = json.NewEncoder(w).Encode(articleComments)
 	if err != nil {
 		return
 	}
