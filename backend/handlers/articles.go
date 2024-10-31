@@ -20,5 +20,8 @@ var articles = []Article{
 
 func GetArticles(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(articles)
+	err := json.NewEncoder(w).Encode(articles)
+	if err != nil {
+		return
+	}
 }
